@@ -102,14 +102,14 @@ static const size_t LEN_STAT_PAGE_BASE = 3;
 static const char STAT_PAGE_FMT1[] =
     "<body>\n"
     "<div id=\"bodyCon\">\n"
-    "<h1>udpxy çŠ¶æ€:</h1>\n"
+    "<h1>udpxy ×´Ì¬:</h1>\n"
     "<div id=\"pgCont\">\n"
     "<table cellspacing=\"0\">\n"
     "<tr>\n"
-    "    <th>æœåŠ¡å™¨è¿›ç¨‹ ID</th>\n"
-    "    <th>è¿æ¥ä¸Šçš„å®¢æˆ·ç«¯</th>\n"
-    "    <th>ç»„æ’­åœ°å€</th>\n"
-    "    <th>æ´»è·ƒçš„å®¢æˆ·ç«¯æ•°</th>\n"
+    "    <th>·şÎñÆ÷½ø³Ì ID</th>\n"
+    "    <th>Á¬½ÓÉÏµÄ¿Í»§¶Ë</th>\n"
+    "    <th>×é²¥µØÖ·</th>\n"
+    "    <th>»îÔ¾µÄ¿Í»§¶ËÊı</th>\n"
     "</tr>\n"
     "<tr>\n"
     "    <td>%d</td>\n"
@@ -119,7 +119,7 @@ static const char STAT_PAGE_FMT1[] =
     "</tr>\n"
     "</table>\n"
     "<form action=\"../restart/\" method=\"get\">\n"
-    "<input type=\"submit\" value=\"é‡æ–°å¯åŠ¨\">\n"
+    "<input type=\"submit\" value=\"ÖØĞÂÆô¶¯\">\n"
     "</form>\n"
     "\n"
     "%s"  /* Active clients table goes here */
@@ -134,14 +134,14 @@ static const char STAT_PAGE_FMT1[] =
 static const char RST_PAGE_FMT1[] =
     "<body onload=\"body_onload();\">\n"
     "<div id=\"bodyCon\">\n"
-    "<h1>udpxyæ­£åœ¨é‡æ–°å¯åŠ¨-æ­¤é¡µå°†è‡ªåŠ¨åˆ·æ–°</h1>\n"
+    "<h1>udpxyÕıÔÚÖØĞÂÆô¶¯-´ËÒ³½«×Ô¶¯Ë¢ĞÂ</h1>\n"
     "<div id=\"pgCont\">\n"
     "<table cellspacing=\"0\">\n"
     "<tr>\n"
-    "    <th>æœåŠ¡å™¨è¿›ç¨‹</th>\n"
-    "    <th>è¿æ¥ä¸Šçš„å®¢æˆ·ç«¯</th>\n"
-    "    <th>ç»„æ’­åœ°å€</th>\n"
-    "    <th>æ´»è·ƒçš„å®¢æˆ·ç«¯æ•°</th>\n"
+    "    <th>·şÎñÆ÷½ø³Ì</th>\n"
+    "    <th>Á¬½ÓÉÏµÄ¿Í»§¶Ë</th>\n"
+    "    <th>×é²¥µØÖ·</th>\n"
+    "    <th>»îÔ¾µÄ¿Í»§¶ËÊı</th>\n"
     "</tr>\n"
     "<tr>\n"
     "    <td>%d</td>\n"
@@ -160,9 +160,9 @@ static const char RST_PAGE_FMT1[] =
     "</html>\n";
 
 static const char* ACLIENT_TABLE[] = {
-    "<h3>æ´»è·ƒçš„å®¢æˆ·ç«¯:</h3>\n"
+    "<h3>»îÔ¾µÄ¿Í»§¶Ë:</h3>\n"
     "<table cellspacing=\"0\" class=\"proctabl\">\n"
-    "<tr><th>è¿›ç¨‹ ID</th><th>è¿æ¥åœ°å€</th><th>ç›®çš„åœ°å€</th><th>ååé‡</th></tr>\n",
+    "<tr><th>½ø³Ì ID</th><th>Á¬½ÓµØÖ·</th><th>Ä¿µÄµØÖ·</th><th>ÍÌÍÂÁ¿</th></tr>\n",
     "</table>\n" };
 
 
@@ -179,13 +179,13 @@ static const char REDIRECT_SCRIPT_FMT[] =
     "</script>";
 
 static const char REQUEST_GUIDE[] =
-    "<h3>å¯ç”¨çš„HTTPè¯·æ±‚:</h3>\n"
+    "<h3>¿ÉÓÃµÄHTTPÇëÇó:</h3>\n"
     "<table cellspacing=\"0\">\n"
-        "<tr><th>è¯·æ±‚æ¨¡æ¿</th><th>åŠŸèƒ½</th></tr>\n"
+        "<tr><th>ÇëÇóÄ£°å</th><th>¹¦ÄÜ</th></tr>\n"
         "<tr><td><small>http://<i>address:port</i>/udp/<i>mcast_addr:mport/</i></small></td>\n"
-        "<td>ä»mcast_addr:mportä¸­ç»§å¤šæ’­æµé‡</td></tr>"
-        "<tr><td><small>http://<i>address:port</i>/status/</small></td><td>æ˜¾ç¤ºudpxyçŠ¶æ€</td></tr>\n"
-        "<tr><td><small>http://<i>address:port</i>/restart/</small></td><td>é‡æ–°å¯åŠ¨udpxy</td></tr>\n"
+        "<td>´Ómcast_addr:mportÖĞ¼Ì¶à²¥Á÷Á¿</td></tr>"
+        "<tr><td><small>http://<i>address:port</i>/status/</small></td><td>ÏÔÊ¾udpxy×´Ì¬</td></tr>\n"
+        "<tr><td><small>http://<i>address:port</i>/restart/</small></td><td>ÖØĞÂÆô¶¯udpxy</td></tr>\n"
     "</table>\n";
 
 
